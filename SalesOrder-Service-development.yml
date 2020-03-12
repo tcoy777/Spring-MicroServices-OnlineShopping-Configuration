@@ -1,0 +1,27 @@
+server:
+  port: 5053
+db:
+  name: salesorderdb
+spring:
+  h2:
+    console:
+      enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myGroup
+  mail:
+    host: localhost
+    port: 25
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+     
+ui:
+  serverUrl: http://localhost:4200/ 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
